@@ -1,0 +1,24 @@
+httperf --client=0/1 --server=127.0.0.1 --port=8000 --uri=/ --send-buffer=4096 --recv-buffer=16384 --num-conns=1 --num-calls=500000
+httperf: warning: open file limit > FD_SETSIZE; limiting max. # of open files to FD_SETSIZE
+Maximum connect burst length: 0
+
+Total: connections 1 requests 500000 replies 500000 test-duration 50.018 s
+
+Connection rate: 0.0 conn/s (50018.4 ms/conn, <=1 concurrent connections)
+Connection time [ms]: min 50018.4 avg 50018.4 max 50018.4 median 50018.5 stddev 0.0
+Connection time [ms]: connect 0.2
+Connection length [replies/conn]: 500000.000
+
+Request rate: 9996.3 req/s (0.1 ms/req)
+Request size [B]: 62.0
+
+Reply rate [replies/s]: min 9691.7 avg 9996.4 max 10163.9 stddev 159.4 (10 samples)
+Reply time [ms]: response 0.1 transfer 0.0
+Reply size [B]: header 71.0 content 12.0 footer 2.0 (total 85.0)
+Reply status: 1xx=0 2xx=500000 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 7.63 system 42.31 (user 15.3% system 84.6% total 99.8%)
+Net I/O: 1415.5 KB/s (11.6*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
